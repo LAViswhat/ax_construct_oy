@@ -1,0 +1,70 @@
+<script setup lang="ts"></script>
+
+<template>
+  <section id="about" class="mx-auto pt-16 bg-black-softer">
+    <div class="grid grid-cols-1 md:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
+      <div class="bg-primary px-4 py-8 md:py-24">
+        <div class="w-36 h-36 md:w-60 md:h-60 mx-auto !mb-8 text-left">
+          <img
+            src="../assets/images/about1.jpeg"
+            alt="Mission"
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+        <h4 class="font-semibold !text-xl text-white !mb-4 md:!mb-12 text-pretty">
+          Asuntorakentaminen
+        </h4>
+        <p class="text-white xl:!text-lg xl:pl-24 text-pretty">
+          Rakennamme ja korjaamme asuntokohteita ja koteja asiakkaisiin eri tarpeisiin. Rakennamme
+          asiakkaan suunnitelmien mukaisia asuntokohteita laadukkaasti ja sovittuna ajankohtana.
+          Voimme tulla mukaan kumppaniksi aivan hankeen alussa, tai vasta myöhemmin, esimerkiksi
+          puhtaasti rakennuspalveluiden tuottajana.
+        </p>
+      </div>
+
+      <div class="bg-white px-4 py-8 md:py-24">
+        <h4 class="font-semibold !text-xl text-black !mb-4 md:!mb-12 text-pretty">
+          Liike- ja toimistorakentaminen
+        </h4>
+        <p class="text-black xl:!text-lg text-pretty">
+          Me toteutamme laadukkaat ja toimivat tilat, jotka vastaavat täydellisesti tilaajan
+          tarpeita. Rakennamme ja korjaamme yrityksille ja muille organisaatioille erilaiset liike-,
+          toimi-, logistiikka- ja urheilutilat. Palvelemme yrityksiä laidasta laitaan. Kerro
+          rohkeasti, minkälaista liike- tai yritystilaa suunnittelet. Toteutamme myös
+          teollisuushallit ja muut teollisuustilat alusta loppuun yhteistyökumppaniemme avulla. Kysy
+          liike- ja teollisuusrakentamisen palveluistamme tai pyydä tarjous!
+        </p>
+        <div class="w-36 h-36 md:w-60 md:h-60 mx-auto !mt-8 md:!mt-24 mb-4 2xl:!ml-64 xl:!ml-36">
+          <img
+            src="../assets/images/about2.jpeg"
+            alt="Goals"
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+      </div>
+
+      <div class="bg-black-softer px-4 py-8 md:py-24">
+        <div class="w-36 h-36 md:w-60 md:h-60 mx-auto !mb-8 text-left">
+          <img
+            src="../assets/images/about3.jpeg"
+            alt="Values"
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+        <h4 class="text-white !text-xl font-semibold !mb-4 md:!mb-12 text-pretty">
+          Julkinen rakentaminen
+        </h4>
+        <p class="text-white xl:!text-lg xl:pl-24 text-pretty">
+          Julkisrakentaminen vaatii vahvaa rakennusosaamista.Rakennamme ja korjaamme julkisia
+          kohteita monipuolisesti, sairaaloista kouluihin, päiväkodeista monitoimitiloihin.
+          Julkisten tilojen on sovelluttava monenlaisille käyttäjille. Niiden on kestettävä aikaa ja
+          aktiivista käyttöä – ja oltava tietenkin turvallisia käyttää. Me tarjoamme laadukkaat
+          rakennuspalvelut julkishallinnon tarpeisiin. Palvelemme kustannustehokkaasti ja etsimme
+          parhaat mahdolliset ratkaisut käytössä olevan budjetin mukaan.
+        </p>
+      </div>
+    </div>
+  </section>
+</template>
+
+<style scoped></style>
