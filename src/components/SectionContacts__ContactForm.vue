@@ -125,7 +125,7 @@ const submitForm = handleSubmit(async (values) => {
           class="w-full p-3 pt-1.5 border-0 border-b-2 border-gray-500 focus:outline-0 focus:border-b-4 focus-within:outline-0"
           required
         />
-        <p v-if="nameField.errorMessage" class="text-red-500 text-sm">
+        <p v-if="nameField.errorMessage" class="error-message text-red-500 text-sm">
           {{ nameField.errorMessage }}
         </p>
       </div>
@@ -139,7 +139,7 @@ const submitForm = handleSubmit(async (values) => {
           class="w-full p-3 pt-1.5 border-0 border-b-2 border-gray-500 focus:outline-0 focus:border-b-4 focus-within:outline-0"
           required
         />
-        <p v-if="phoneField.errorMessage" class="text-red-500 text-sm">
+        <p v-if="phoneField.errorMessage" class="error-message text-red-500 text-sm">
           {{ phoneField.errorMessage }}
         </p>
       </div>
@@ -155,7 +155,7 @@ const submitForm = handleSubmit(async (values) => {
         class="w-full p-3 pt-1.5 border-0 border-b-2 border-gray-500 focus:outline-0 focus:border-b-4 focus-within:outline-0"
         required
       />
-      <p v-if="emailField.errorMessage" class="text-red-500 text-sm">
+      <p v-if="emailField.errorMessage" class="error-message text-red-500 text-sm">
         {{ emailField.errorMessage }}
       </p>
     </div>
@@ -169,7 +169,9 @@ const submitForm = handleSubmit(async (values) => {
         class="w-full p-3 pt-1.5 border-0 border-b-2 border-gray-500 focus:outline-0 focus:border-b-4 focus-within:outline-0"
         rows="3"
       ></textarea>
-      <p v-if="message.errorMessage" class="text-red-500">{{ message.errorMessage }}</p>
+      <p v-if="message.errorMessage" class="error-message text-red-500">
+        {{ message.errorMessage }}
+      </p>
     </div>
 
     <div class="flex items-center !mb-8">
@@ -184,13 +186,15 @@ const submitForm = handleSubmit(async (values) => {
       <label for="privacy" class="text-sm text-gray-500">Olen lukenut tietosuojakäytännöstä</label>
     </div>
     <div>
-      <p v-if="privacyField.errorMessage" class="text-red-500 text-sm">
+      <p v-if="privacyField.errorMessage" class="error-message text-red-500 text-sm">
         {{ privacyField.errorMessage }}
       </p>
     </div>
 
     <p v-if="successMessage" class="text-secondary !text-lg !font-bold">{{ successMessage }}</p>
-    <p v-if="errorMessage" class="text-red-500 !text-lg !font-bold">{{ errorMessage }}</p>
+    <p v-if="errorMessage" class="error-message text-red-500 !text-lg !font-bold">
+      {{ errorMessage }}
+    </p>
 
     <div>
       <div class="g-recaptcha !mb-4" :data-sitekey="RECAPTCHA_SITE_KEY"></div>
@@ -204,4 +208,19 @@ const submitForm = handleSubmit(async (values) => {
   </form>
 </template>
 
-<style scoped></style>
+<style scoped>
+input,
+textarea {
+  border-bottom: solid 2px #6b7282;
+}
+input:focus,
+textarea:focus {
+  border-bottom-width: 4px;
+}
+#privacy {
+  border: solid 2px #6b7282;
+}
+.error-message {
+  color: #fb2c36;
+}
+</style>
