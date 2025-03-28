@@ -92,4 +92,10 @@ const projectsSwiperOptions = {
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.8rem !important;
+  }
+}
+</style>

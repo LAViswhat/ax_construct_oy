@@ -60,4 +60,10 @@ const achievements: Achievments[] = [
     </div>
   </section>
 </template>
-<style scoped></style>
+<style scoped>
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1.5rem !important;
+  }
+}
+</style>

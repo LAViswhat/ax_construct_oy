@@ -62,4 +62,10 @@
     </div>
   </section>
 </template>
-<style scoped></style>
+<style scoped>
+@media (max-width: 768px) {
+  h4 {
+    font-size: 1.25rem !important;
+  }
+}
+</style>

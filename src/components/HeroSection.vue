@@ -61,4 +61,10 @@ const parallaxTransform = computed(() => `translateY(${scrollY.value / 5}px)`)
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem !important;
+  }
+}
+</style>

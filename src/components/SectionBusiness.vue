@@ -71,4 +71,13 @@ const serviceList: Service[] = [
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1.5rem !important;
+  }
+  h4 {
+    font-size: 1.25rem !important;
+  }
+}
+</style>

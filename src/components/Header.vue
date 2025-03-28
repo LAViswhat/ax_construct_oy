@@ -173,4 +173,9 @@ nav li a {
 :deep(.p-drawer-header) {
   padding: 2px !important;
 }
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1.5rem !important;
+  }
+}
 </style>
