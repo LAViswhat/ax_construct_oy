@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import architectureIcon from '@/assets/images/icons/architecture.png'
+import planningIcon from '@/assets/images/icons/planning.png'
+import constructionIcon from '@/assets/images/icons/construction.svg'
+import researchIcon from '@/assets/images/icons/research.png'
 interface Service {
   title: string
   description: string
@@ -10,26 +14,26 @@ const serviceList: Service[] = [
     title: 'Urakointi',
     description:
       'Tarjoamme asuntorakentamista, liike- ja toimistorakentamista, teollisuusrakentamista sekä julkista rakentamista.',
-    image: '@/assets/images/icons/architecture.png',
+    image: architectureIcon,
   },
   {
     title: 'Hankkeet',
     description:
       'Otamme töihin mitä tahansa monimutkaisia sisä- ja ulko korjausprojekteja omakotitalosta sairaalaan.',
-    image: '@/assets/images/icons/planning.png',
+    image: planningIcon,
   },
 
   {
     title: 'Uudisrakentaminen. Korjausrakentaminen',
     description:
       'Toteutamme projektit alusta loppuun tarvittavalla  materiaalilla, toimitettuna työmaalle.',
-    image: '@/assets/images/icons/construction.svg',
+    image: constructionIcon,
   },
   {
     title: 'Materiaali',
     description:
       'Työstämme tehtävät kilpailukykyisesti, laadukkaasti ja vastuullisesti. Mikään tehtävät ei ole lian pieni tai suuri.',
-    image: '@/assets/images/icons/research.png',
+    image: researchIcon,
   },
 ]
 </script>

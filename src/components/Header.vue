@@ -2,6 +2,9 @@
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import UiDrawer from './ui/UiDrawer.vue'
+import homeIcon from '@/assets/images/icons/nav_home.svg'
+import aboutIcon from '@/assets/images/icons/nav_about.svg'
+import contactIcon from '@/assets/images/icons/nav_getintouch.svg'
 
 interface Navigation {
   name: string
@@ -12,17 +15,17 @@ interface Navigation {
 const navLinks: Navigation[] = [
   {
     name: 'Etusivu',
-    icon: '@/assets/images/icons/nav_home.svg',
+    icon: homeIcon,
     url: '#home',
   },
   {
     name: 'Meistä',
-    icon: '@/assets/images/icons/nav_about.svg',
+    icon: aboutIcon,
     url: '#about',
   },
   {
     name: 'Yhteystiedot',
-    icon: '@/assets/images/icons/nav_getintouch.svg',
+    icon: contactIcon,
     url: '#contacts',
   },
 ]

@@ -3,6 +3,11 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
+import firstPartnerLogo from '@/assets/images/partner1.png'
+import secondPartnerLogo from '@/assets/images/partner2.svg'
+import thirdPartnerLogo from '@/assets/images/partner3.png'
+import fourthPartnerLogo from '@/assets/images/partner4.png'
+
 interface Partners {
   id: number
   title: string
@@ -13,22 +18,22 @@ const partnersList: Partners[] = [
   {
     id: 1,
     title: 'rakentaja talo',
-    image: '@/assets/images/partner1.png',
+    image: firstPartnerLogo,
   },
   {
     id: 2,
     title: 'jvr',
-    image: '@/assets/images/partner2.svg',
+    image: secondPartnerLogo,
   },
   {
     id: 3,
     title: 'Sajucon',
-    image: '@/assets/images/partner3.png',
+    image: thirdPartnerLogo,
   },
   {
     id: 4,
     title: 'leikkiturva oy',
-    image: '@/assets/images/partner4.png',
+    image: fourthPartnerLogo,
   },
 ]
 

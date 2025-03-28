@@ -4,6 +4,9 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
+import firstProjectImage from '@/assets/images/projects1.jpg'
+import secondProjectImage from '@/assets/images/projects2.jpg'
+import thirdProjectImage from '@/assets/images/projects3.jpg'
 
 interface Projects {
   image: string
@@ -12,16 +15,16 @@ interface Projects {
 
 const projectsList: Projects[] = [
   {
-    image: '@/assets/images/projects1.JPG',
-    title: 'project',
+    image: firstProjectImage,
+    title: 'project 1',
   },
   {
-    image: '@/assets/images/projects2.jpg',
-    title: 'project',
+    image: secondProjectImage,
+    title: 'project 2',
   },
   {
-    image: '@/assets/images/projects3.jpg',
-    title: 'project',
+    image: thirdProjectImage,
+    title: 'project 3',
   },
 ]
 
