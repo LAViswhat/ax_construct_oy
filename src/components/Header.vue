@@ -2,6 +2,7 @@
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import UiDrawer from './ui/UiDrawer.vue'
+import PrimeDrawer from './ui/PrimeDrawer.vue'
 import homeIcon from '@/assets/images/icons/nav_home.svg'
 import aboutIcon from '@/assets/images/icons/nav_about.svg'
 import contactIcon from '@/assets/images/icons/nav_getintouch.svg'
@@ -118,7 +119,7 @@ onUnmounted(() => {
       </nav>
 
       <!-- Mobile Navigation Menu -->
-      <UiDrawer :menu-open="menuOpen" @close="menuOpen = false">
+      <!-- <UiDrawer :menu-open="menuOpen" @close="menuOpen = false">
         <div class="flex flex-col justify-between h-full">
           <nav class="p-6 !mt-8">
             <ul class="flex flex-col gap-4">
@@ -142,7 +143,7 @@ onUnmounted(() => {
               </template>
             </ul>
           </nav>
-          <!-- Contacts -->
+         
           <div class="mt-auto p-4 pt-2 mx-auto border-t-1 border-t-white/40">
             <h2 class="!text-xl text-secondary">Ax Construct Oy</h2>
             <p class="mt-2 pb-4">Y-Tunnus: 3164229-2</p>
@@ -162,7 +163,51 @@ onUnmounted(() => {
             </div>
           </div>
         </div>
-      </UiDrawer>
+      </UiDrawer> -->
+      <PrimeDrawer :visible="menuOpen" @update:visible="menuOpen = $event">
+        <div class="flex flex-col justify-between h-full">
+          <nav class="px-6">
+            <ul class="flex flex-col gap-4">
+              <li v-if="!isHomePage" class="uppercase">
+                <RouterLink to="/" class="text-primary py-2 inline-flex items-center gap-2">
+                  <img class="w-8 h-8" src="/src/assets/images/icons/nav_home.svg" />
+                  <span class="!font-bold text-base">Etusivu</span>
+                </RouterLink>
+              </li>
+              <template v-if="isHomePage">
+                <li v-for="link in navLinks" :key="link.name" class="uppercase">
+                  <a
+                    @click="(e) => scrollToSection(e, link.url)"
+                    :href="link.url"
+                    class="text-primary py-2 inline-flex items-center gap-2"
+                  >
+                    <img class="w-8 h-8" :src="link.icon" />
+                    <span class="!font-bold text-base">{{ link.name }}</span>
+                  </a>
+                </li>
+              </template>
+            </ul>
+          </nav>
+          <div class="mt-auto p-4 pt-2 mx-auto border-t-1 border-t-white/40">
+            <h2 class="!text-xl text-secondary">Ax Construct Oy</h2>
+            <p class="mt-2 pb-4">Y-Tunnus: 3164229-2</p>
+            <div class="flex flex-col justify-start items-start">
+              <a href="tel:+358400491160" class="inline-flex items-center gap-2 pb-6">
+                <img class="w-6 h-6" src="../assets/images/icons/phone.svg" />
+                <span class="text-sm md:text-lg">+358 400491160</span>
+              </a>
+              <a href="mailto:info@axconstruct.fi" class="inline-flex items-center gap-2 pb-6">
+                <img class="w-6 h-6" src="../assets/images/icons/e-mail.svg" />
+                <span class="text-sm md:text-lg">info@axconstruct.fi</span>
+              </a>
+              <p class="inline-flex items-center gap-2">
+                <img class="w-6 h-6" src="../assets/images/icons/address.svg" />
+                <span class="text-sm md:text-lg">Haapaniemenkatu 11 A 24 00530 Helsinki</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </PrimeDrawer>
     </div>
   </header>
 </template>
@@ -170,5 +215,8 @@ onUnmounted(() => {
 <style scoped>
 nav li a {
   font-weight: 700;
+}
+:deep(.p-drawer-header) {
+  padding: 2px !important;
 }
 </style>
