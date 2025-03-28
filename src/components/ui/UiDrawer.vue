@@ -13,7 +13,7 @@ watch(
 </script>
 
 <template>
-  <!-- Затемненный фон -->
+  <!-- Darked background -->
   <Teleport to="body">
     <div
       class="fixed inset-0 bg-black/50 transition-opacity lg:hidden z-40"

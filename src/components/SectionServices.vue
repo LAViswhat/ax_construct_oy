@@ -78,13 +78,17 @@ const colTwoServices = [
         </div>
         <div class="flex flex-row w-full justify-around items-center gap-8 p-4 bg-white">
           <div class="flex flex-col">
-            <ul class="space-y-4 text-lg text-gray-700">
-              <li v-for="list in colOneServices" :key="list.name">✅ {{ list.name }}</li>
+            <ul class="space-y-4 text-gray-700">
+              <li class="text-sm md:text-lg" v-for="list in colOneServices" :key="list.name">
+                ✅ {{ list.name }}
+              </li>
             </ul>
           </div>
           <div class="flex flex-col">
-            <ul class="space-y-4 text-lg text-gray-700">
-              <li v-for="list in colTwoServices" :key="list.name">✅ {{ list.name }}</li>
+            <ul class="space-y-4 text-gray-700">
+              <li class="text-sm md:text-lg" v-for="list in colTwoServices" :key="list.name">
+                ✅ {{ list.name }}
+              </li>
             </ul>
           </div>
         </div>

@@ -44,10 +44,10 @@ const projectsSwiperOptions = {
 
 <template>
   <section
-    class="flex justify-center items-center w-full bg-linear-to-b from-50% from-primary to-50% to-stone-100"
+    class="flex justify-center items-center w-full bg-white lg:bg-linear-to-b from-50% from-primary to-50% to-stone-100"
   >
     <div class="container mx-auto py-4 lg:py-16 lg:px-24" data-aos="fade-up" data-aos-delay="100">
-      <h2 class="font-semibold text-center text-white pb-4 lg:pb-10">
+      <h2 class="font-semibold text-center text-primary lg:text-white pb-4 lg:pb-10">
         Referenssit - Toteutettuja projektia
       </h2>
 
