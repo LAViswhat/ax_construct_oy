@@ -10,26 +10,26 @@ const serviceList: Service[] = [
     title: 'Urakointi',
     description:
       'Tarjoamme asuntorakentamista, liike- ja toimistorakentamista, teollisuusrakentamista sekä julkista rakentamista.',
-    image: '/src/assets/images/icons/architecture.png',
+    image: '@/assets/images/icons/architecture.png',
   },
   {
     title: 'Hankkeet',
     description:
       'Otamme töihin mitä tahansa monimutkaisia sisä- ja ulko korjausprojekteja omakotitalosta sairaalaan.',
-    image: '/src/assets/images/icons/planning.png',
+    image: '@/assets/images/icons/planning.png',
   },
 
   {
     title: 'Uudisrakentaminen. Korjausrakentaminen',
     description:
       'Toteutamme projektit alusta loppuun tarvittavalla  materiaalilla, toimitettuna työmaalle.',
-    image: '/src/assets/images/icons/construction.svg',
+    image: '@/assets/images/icons/construction.svg',
   },
   {
     title: 'Materiaali',
     description:
       'Työstämme tehtävät kilpailukykyisesti, laadukkaasti ja vastuullisesti. Mikään tehtävät ei ole lian pieni tai suuri.',
-    image: '/src/assets/images/icons/research.png',
+    image: '@/assets/images/icons/research.png',
   },
 ]
 </script>

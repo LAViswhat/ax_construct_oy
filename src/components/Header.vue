@@ -12,17 +12,17 @@ interface Navigation {
 const navLinks: Navigation[] = [
   {
     name: 'Etusivu',
-    icon: '/src/assets/images/icons/nav_home.svg',
+    icon: '@/assets/images/icons/nav_home.svg',
     url: '#home',
   },
   {
     name: 'Meistä',
-    icon: '/src/assets/images/icons/nav_about.svg',
+    icon: '@/assets/images/icons/nav_about.svg',
     url: '#about',
   },
   {
     name: 'Yhteystiedot',
-    icon: '/src/assets/images/icons/nav_getintouch.svg',
+    icon: '@/assets/images/icons/nav_getintouch.svg',
     url: '#contacts',
   },
 ]

@@ -12,15 +12,15 @@ interface Projects {
 
 const projectsList: Projects[] = [
   {
-    image: '/src/assets/images/projects1.JPG',
+    image: '@/assets/images/projects1.JPG',
     title: 'project',
   },
   {
-    image: '/src/assets/images/projects2.jpg',
+    image: '@/assets/images/projects2.jpg',
     title: 'project',
   },
   {
-    image: '/src/assets/images/projects3.jpg',
+    image: '@/assets/images/projects3.jpg',
     title: 'project',
   },
 ]

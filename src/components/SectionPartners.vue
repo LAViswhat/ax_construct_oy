@@ -13,22 +13,22 @@ const partnersList: Partners[] = [
   {
     id: 1,
     title: 'rakentaja talo',
-    image: '/src/assets/images/partner1.png',
+    image: '@/assets/images/partner1.png',
   },
   {
     id: 2,
     title: 'jvr',
-    image: '/src/assets/images/partner2.svg',
+    image: '@/assets/images/partner2.svg',
   },
   {
     id: 3,
     title: 'Sajucon',
-    image: '/src/assets/images/partner3.png',
+    image: '@/assets/images/partner3.png',
   },
   {
     id: 4,
     title: 'leikkiturva oy',
-    image: '/src/assets/images/partner4.png',
+    image: '@/assets/images/partner4.png',
   },
 ]
 
