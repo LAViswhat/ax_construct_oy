@@ -108,3 +108,11 @@
     </p>
   </section>
 </template>
+
+<style scoped>
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem !important;
+  }
+}
+</style>
