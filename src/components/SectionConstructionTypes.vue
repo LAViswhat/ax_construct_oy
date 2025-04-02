@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section id="about" class="mx-auto pt-16 bg-black-softer">
+  <section id="about" class="mx-auto md:pt-16 md:bg-black-softer">
     <div class="grid grid-cols-1 md:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
       <div class="bg-primary px-4 py-8 md:py-24">
         <div class="w-36 h-36 md:w-60 md:h-60 mx-auto !mb-8 text-left">
@@ -22,11 +22,20 @@
         </p>
       </div>
 
-      <div class="bg-white px-4 py-8 md:py-24">
-        <h4 class="font-semibold !text-xl text-black !mb-4 md:!mb-12 text-pretty">
+      <div class="flex flex-col bg-white px-4 py-8 md:py-24">
+        <div
+          class="md:order-3 w-36 h-36 md:w-60 md:h-60 mx-auto text-left md:!mt-24 !mb-8 2xl:!ml-64 xl:!ml-36"
+        >
+          <img
+            src="../assets/images/about2.jpeg"
+            alt="Goals"
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+        <h4 class="md:order-1 font-semibold !text-xl text-black !mb-4 md:!mb-12 text-pretty">
           Liike- ja toimistorakentaminen
         </h4>
-        <p class="text-black xl:!text-lg text-pretty">
+        <p class="md:order-2 text-black xl:!text-lg text-pretty">
           Me toteutamme laadukkaat ja toimivat tilat, jotka vastaavat täydellisesti tilaajan
           tarpeita. Rakennamme ja korjaamme yrityksille ja muille organisaatioille erilaiset liike-,
           toimi-, logistiikka- ja urheilutilat. Palvelemme yrityksiä laidasta laitaan. Kerro
@@ -34,13 +43,6 @@
           teollisuushallit ja muut teollisuustilat alusta loppuun yhteistyökumppaniemme avulla. Kysy
           liike- ja teollisuusrakentamisen palveluistamme tai pyydä tarjous!
         </p>
-        <div class="w-36 h-36 md:w-60 md:h-60 mx-auto !mt-8 md:!mt-24 mb-4 2xl:!ml-64 xl:!ml-36">
-          <img
-            src="../assets/images/about2.jpeg"
-            alt="Goals"
-            class="w-full h-full object-cover rounded-full"
-          />
-        </div>
       </div>
 
       <div class="bg-black-softer px-4 py-8 md:py-24">
