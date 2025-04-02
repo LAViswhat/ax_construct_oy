@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Autoplay, Pagination } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination'
+import { ref } from 'vue'
+import Carousel from 'primevue/carousel'
 import firstPartnerLogo from '@/assets/images/partner1.png'
 import secondPartnerLogo from '@/assets/images/partner2.svg'
 import thirdPartnerLogo from '@/assets/images/partner3.png'
@@ -37,17 +35,18 @@ const partnersList: Partners[] = [
   },
 ]
 
-const partnersSwiperOptions = {
-  modules: [Autoplay, Pagination],
-  slidesPerView: 1,
-  spaceBetween: 20,
-  pagination: { clickable: true },
-  autoplay: { delay: 2000 },
-  breakpoints: {
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 4 },
+const responsiveOptions = ref([
+  {
+    breakpoint: '1024px',
+    numVisible: 2,
+    numScroll: 1,
   },
-}
+  {
+    breakpoint: '768px',
+    numVisible: 1,
+    numScroll: 1,
+  },
+])
 </script>
 
 <template>
@@ -57,16 +56,22 @@ const partnersSwiperOptions = {
         Teemme tiivisti yhteistyötä useiden alan parhaiden ammattilaisten kanssa.
       </h2>
       <!-- Mobile carousel -->
+
       <div class="lg:hidden">
-        <Swiper v-bind="partnersSwiperOptions" class="partners-swiper">
-          <SwiperSlide v-for="item in partnersList" :key="item.id">
-            <img
-              :src="item.image"
-              :alt="item.title"
-              class="w-full h-18 !mb-12 object-contain mx-auto"
-            />
-          </SwiperSlide>
-        </Swiper>
+        <Carousel
+          :value="partnersList"
+          :numVisible="4"
+          :numScroll="1"
+          :responsiveOptions="responsiveOptions"
+          circular
+          :autoplayInterval="2000"
+        >
+          <template #item="{ data }">
+            <div class="flex justify-center">
+              <img :src="data.image" :alt="data.title" class="w-full h-18 object-contain" />
+            </div>
+          </template>
+        </Carousel>
       </div>
 
       <!-- Desktop grid -->
@@ -88,5 +93,19 @@ const partnersSwiperOptions = {
   h2 {
     font-size: 1.8rem !important;
   }
+}
+::v-deep(.p-carousel-prev-button),
+::v-deep(.p-carousel-next-button) {
+  display: none;
+}
+
+::v-deep(.p-carousel-indicator-button) {
+  background-color: #b94404;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+::v-deep(.p-carousel-indicator-active .p-carousel-indicator-button) {
+  background-color: #4a9927;
 }
 </style>

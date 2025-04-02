@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Autoplay, Pagination, Navigation } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
+import { ref } from 'vue'
+import Carousel from 'primevue/carousel'
 import firstProjectImage from '@/assets/images/projects1.jpg'
 import secondProjectImage from '@/assets/images/projects2.jpg'
 import thirdProjectImage from '@/assets/images/projects3.jpg'
@@ -27,19 +24,18 @@ const projectsList: Projects[] = [
     title: 'project 3',
   },
 ]
-
-const projectsSwiperOptions = {
-  modules: [Autoplay, Pagination, Navigation],
-  slidesPerView: 1,
-  spaceBetween: 20,
-  pagination: { clickable: true },
-  navigation: true,
-  autoplay: { delay: 3500 },
-  breakpoints: {
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
+const responsiveOptions = ref([
+  {
+    breakpoint: '1024px',
+    numVisible: 2,
+    numScroll: 1,
   },
-}
+  {
+    breakpoint: '768px',
+    numVisible: 1,
+    numScroll: 1,
+  },
+])
 </script>
 
 <template>
@@ -52,23 +48,26 @@ const projectsSwiperOptions = {
       </h2>
 
       <!-- Mobile Carousel -->
-      <div class="lg:hidden mt-8">
-        <Swiper v-bind="projectsSwiperOptions" class="projects-swiper">
-          <SwiperSlide v-for="project in projectsList" :key="project.title">
-            <div
-              class="bg-white h-64 flex items-center justify-center overflow-hidden relative group"
-            >
+
+      <div class="lg:hidden">
+        <Carousel
+          :value="projectsList"
+          :numVisible="4"
+          :numScroll="1"
+          :responsiveOptions="responsiveOptions"
+          circular
+          :autoplayInterval="2000"
+        >
+          <template #item="{ data }">
+            <div class="flex justify-center items-center w-full h-64">
               <img
-                :src="project.image"
-                :alt="project.title"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                :src="data.image"
+                :alt="data.title"
+                class="w-full h-full overflow-hidden object-cover"
               />
             </div>
-          </SwiperSlide>
-        </Swiper>
+          </template>
+        </Carousel>
       </div>
 
       <!-- Desktop Grid -->
@@ -97,5 +96,33 @@ const projectsSwiperOptions = {
   h2 {
     font-size: 1.8rem !important;
   }
+}
+
+::v-deep(.p-carousel-content) {
+  display: block !important;
+  position: relative !important;
+}
+
+::v-deep(.p-carousel-prev-button),
+::v-deep(.p-carousel-next-button) {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white !important;
+  color: #4a9927 !important;
+  z-index: 10;
+}
+::v-deep(.p-carousel-prev-button) {
+  left: 20px;
+}
+::v-deep(.p-carousel-next-button) {
+  right: 20px;
+}
+
+::v-deep(.p-carousel-indicator-button) {
+  background-color: #8e8f90;
+}
+::v-deep(.p-carousel-indicator-active .p-carousel-indicator-button) {
+  background-color: #4a9927;
 }
 </style>
