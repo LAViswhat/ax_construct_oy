@@ -14,7 +14,7 @@ const buttonClasses = computed(() => ({
   'px-8 py-4 min-w-44 md:min-w-64 rounded-lg text-md !font-bold cursor-pointer transition-all duration-300 ease-in-out':
     true,
   'bg-black text-white hover:bg-stone-800 border border-black': props.variant === 'primary',
-  'bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.6)] border border-white/20 transition-colors':
+  'bg-white/10 hover:bg-white/20 backdrop-blur-sm text-black drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.6)] border border-white/20 transition-colors':
     props.variant === 'secondary',
 }))
 </script>
