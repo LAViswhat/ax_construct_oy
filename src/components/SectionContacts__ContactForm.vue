@@ -84,25 +84,25 @@ const errorMessage = ref('')
 const submitForm = handleSubmit(async (values) => {
   isSubmitting.value = true
 
-  const recaptchaResponse = (window as any).grecaptcha.getResponse()
+  /*   const recaptchaResponse = (window as any).grecaptcha.getResponse()
   if (!recaptchaResponse) {
     errorMessage.value = 'Vahvista reCAPTCHA'
     isSubmitting.value = false
     return
-  }
+  } */
 
   const templateParams = {
     name: values.name,
     phone: values.phone,
     email: values.email,
     message: values.message,
-    'g-recaptcha-response': recaptchaResponse,
+    /*     'g-recaptcha-response': recaptchaResponse, */
   }
 
   try {
     await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
-    successMessage.value = 'Viesti on lähetetty onnistuneesti!'
-    ;(window as any).grecaptcha.reset()
+    successMessage.value =
+      'Viesti on lähetetty onnistuneesti!' /* (window as any).grecaptcha.reset() */
     resetForm()
   } catch (error) {
     console.error('Lomakkeen lähetysvirhe:', error)
@@ -197,7 +197,7 @@ const submitForm = handleSubmit(async (values) => {
     </p>
 
     <div>
-      <div class="g-recaptcha !mb-4" :data-sitekey="RECAPTCHA_SITE_KEY"></div>
+      <!-- <div class="g-recaptcha !mb-4" :data-sitekey="RECAPTCHA_SITE_KEY"></div> -->
       <UiButton type="submit" variant="primary">
         <span class="flex flex-row justify-center items-center gap-4" v-if="isSubmitting"
           ><img src="../assets/images/icons/loading.svg" /> Lähetä
