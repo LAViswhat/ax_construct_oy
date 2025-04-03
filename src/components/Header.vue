@@ -32,9 +32,25 @@ const navLinks: Navigation[] = [
 
 const isScrolled = ref(false)
 const menuOpen = ref(false)
+const isVisible = ref(true)
+const lastScrollY = ref(0)
 const route = useRoute()
 
 const isHomePage = computed(() => route.path === '/')
+
+const handleScroll = () => {
+  const currentScrollY = window.scrollY
+
+  isVisible.value = currentScrollY > 50
+
+  if (currentScrollY > lastScrollY.value && currentScrollY > 100) {
+    isVisible.value = false
+  } else {
+    isVisible.value = true
+  }
+
+  lastScrollY.value = currentScrollY
+}
 
 const scrollToSection = (event: Event, sectionId: string) => {
   event.preventDefault()
@@ -61,9 +77,9 @@ const scrollToSection = (event: Event, sectionId: string) => {
   }
 }
 
-const handleScroll = () => {
+/* const handleScroll = () => {
   isScrolled.value = window.scrollY > 550
-}
+} */
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
@@ -75,28 +91,28 @@ onUnmounted(() => {
 </script>
 <template>
   <header
-    class="flex justify-center items-center shadow-md fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out border-b border-gray-300"
+    class="flex justify-center items-center shadow-md fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out border-b border-gray-300 py-6 bg-stone-500/20 bg-clip-padding backdrop-filter backdrop-blur-sm"
     :class="{
-      'py-6 bg-stone-900/20 bg-clip-padding backdrop-filter backdrop-blur-sm': isScrolled,
-      'bg-transparent py-2': !isScrolled,
+      'translate-y-0': isVisible,
+      '-translate-y-full': !isVisible,
     }"
   >
     <div class="container mx-auto flex justify-between items-center px-4">
       <RouterLink class="flex-3/4" to="/"
         ><h3
-          class="text-secondary uppercase font-roboto drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.6)]"
+          class="text-secondary uppercase font-roboto drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
         >
           ax construct oy
         </h3>
       </RouterLink>
       <!-- Mobile Menu Button -->
-      <button v-if="isScrolled" class="lg:hidden" @click="menuOpen = !menuOpen">
+      <button class="lg:hidden" @click="menuOpen = !menuOpen">
         <img src="../assets/images/icons/menu-hamburger.svg" alt="" />
       </button>
 
       <!-- Desktop Navigation Menu-->
       <nav>
-        <ul v-if="isScrolled" class="hidden lg:flex gap-4">
+        <ul class="hidden lg:flex gap-4">
           <li v-if="!isHomePage" class="text-white uppercase">
             <RouterLink
               to="/"
@@ -109,7 +125,7 @@ onUnmounted(() => {
               <a
                 @click="(e) => scrollToSection(e, link.url)"
                 :href="link.url"
-                class="hover:text-gray-300 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.6)]"
+                class="text-primary hover:text-primary/10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
                 >{{ link.name }}</a
               >
             </li>
@@ -180,7 +196,7 @@ nav li a {
   font-weight: 700;
 }
 :deep(.p-drawer-header) {
-  padding: 2px !important;
+  padding: var(--p-drawer-header-padding, 2px);
 }
 @media (max-width: 768px) {
   h3 {
