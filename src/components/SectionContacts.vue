@@ -38,7 +38,7 @@ import SectionContacts__ContactForm from './SectionContacts__ContactForm.vue'
         <img
           src="../assets/images/luotettavakumppani.png.webp"
           alt="logo"
-          class="w-24 h-10 md:w-52 md:h-20 absolute bottom-0 right-0 translate-y-16 md:-translate-y-8"
+          class="w-24 h-10 !mt-8 md:w-52 md:h-20 absolute bottom-0 right-0 translate-y-16 md:-translate-y-8"
         />
       </div>
     </div>
