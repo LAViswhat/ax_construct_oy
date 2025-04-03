@@ -8,16 +8,18 @@
     >
       <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 !mt-8 items-end">
         <div
-          class="flex flex-row lg:flex-col justify-center items-center lg:items-start bg-white lg:bg-primary xl:items-end lg:px-3 xl:px-6 py-0"
+          class="flex flex-row lg:flex-col justify-center items-start bg-white lg:bg-primary xl:items-end lg:px-3 xl:px-6 py-0"
         >
-          <div class="block shrink-0 p-4 xl:!mb-8 m-0 h-48 w-48 lg:h-60 lg:w-60 rounded-full">
+          <div
+            class="block shrink-0 p-2 lg:p-4 xl:!mb-8 m-0 h-48 w-48 lg:h-60 lg:w-60 rounded-full"
+          >
             <img
               class="object-cover block w-full h-full rounded-full"
               src="../assets/images/founder.jpg"
               alt="Founder"
             />
           </div>
-          <div class="p-4 bg-white">
+          <div class="p-2 pl-0 lg:p-4 bg-white">
             <h4 class="uppercase">Aleksandr K.</h4>
             <h5 class="!font-normal">Toimitusjohtaja. Työnjohtaja</h5>
             <p class="pt-6 !font-bold">

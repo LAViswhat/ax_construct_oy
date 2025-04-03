@@ -41,7 +41,7 @@ const isHomePage = computed(() => route.path === '/')
 const handleScroll = () => {
   const currentScrollY = window.scrollY
 
-  isVisible.value = currentScrollY > 50
+  isScrolled.value = currentScrollY > 50
 
   if (currentScrollY > lastScrollY.value && currentScrollY > 100) {
     isVisible.value = false
