@@ -51,12 +51,12 @@ const responsiveOptions = ref([
 
 <template>
   <section class="flex justify-center items-center w-full bg-primary">
-    <div class="container mx-auto py-4 md:py-16 md:px-24" data-aos="fade-up" data-aos-delay="100">
-      <h2 class="font-semibold text-center text-white pb-4 lg:pb-16">
+    <div class="container mx-auto py-4 md:py-16 lg:px-24" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="font-semibold text-center text-white md:!text-3xl lg:!text-4xl pb-4 lg:pb-16">
         Teemme tiivisti yhteistyötä useiden alan parhaiden ammattilaisten kanssa.
       </h2>
-      <!-- Mobile carousel -->
 
+      <!-- Mobile carousel -->
       <div class="lg:hidden">
         <Carousel
           :value="partnersList"

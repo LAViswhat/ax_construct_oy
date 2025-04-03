@@ -49,9 +49,9 @@ const parallaxTransform = computed(() => `translateY(${scrollY.value / 5}px)`)
       transform: parallaxTransform,
     }"
   >
-    <div class="pl-8 lg:pl-24 !mt-28 md:!mt-54 flex flex-col justify-start">
+    <div class="pl-8 lg:pl-24 flex flex-col justify-around h-full">
       <h1>Rakennamme. Korjaamme.<br />Laajennamme.</h1>
-      <div class="flex flex-col md:flex-row !mt-30 lg:!mt-24 items-start gap-4">
+      <div class="flex flex-col md:flex-row items-start gap-4 !-mt-16">
         <UiButton @click="(e) => scrollToSection(e, '#about')" variant="primary">Meistä</UiButton>
         <UiButton @click="(e) => scrollToSection(e, '#contacts')" variant="secondary"
           >Kontaktit</UiButton

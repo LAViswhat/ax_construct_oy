@@ -43,7 +43,9 @@ const responsiveOptions = ref([
     class="flex justify-center items-center w-full bg-white lg:bg-linear-to-b from-50% from-primary to-50% to-stone-100"
   >
     <div class="container mx-auto py-4 lg:py-16 lg:px-24" data-aos="fade-up" data-aos-delay="100">
-      <h2 class="font-semibold text-center text-primary lg:text-white pb-4 lg:pb-10">
+      <h2
+        class="font-semibold text-center text-primary lg:text-white md:!text-3xl lg:!text-4xl pb-4 lg:pb-10"
+      >
         Referenssit - Toteutettuja projektia
       </h2>
 
@@ -59,7 +61,7 @@ const responsiveOptions = ref([
           :autoplayInterval="2000"
         >
           <template #item="{ data }">
-            <div class="flex justify-center items-center w-full h-64">
+            <div class="flex justify-center items-center md:px-2 w-full h-64">
               <img
                 :src="data.image"
                 :alt="data.title"
@@ -108,7 +110,7 @@ const responsiveOptions = ref([
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: white !important;
+  /*   background-color: white !important; */
   color: #4a9927 !important;
   z-index: 10;
 }
@@ -118,7 +120,11 @@ const responsiveOptions = ref([
 ::v-deep(.p-carousel-next-button) {
   right: 20px;
 }
-
+::v-deep(.p-carousel-prev-button svg),
+::v-deep(.p-carousel-next-button svg) {
+  width: 36px;
+  height: 36px;
+}
 ::v-deep(.p-carousel-indicator-button) {
   background-color: #8e8f90;
 }
