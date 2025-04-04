@@ -116,7 +116,7 @@ onUnmounted(() => {
           <li v-if="!isHomePage" class="text-white uppercase">
             <RouterLink
               to="/"
-              class="text-primary hover:text-primary/70 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
+              class="text-primary hover:text-primary/70 drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,0.8)]"
               >Etusivu</RouterLink
             >
           </li>
@@ -125,7 +125,7 @@ onUnmounted(() => {
               <a
                 @click="(e) => scrollToSection(e, link.url)"
                 :href="link.url"
-                class="text-primary hover:text-primary/70 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
+                class="text-primary hover:text-primary/70 drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,0.8)]"
                 >{{ link.name }}</a
               >
             </li>

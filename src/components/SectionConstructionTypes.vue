@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section id="about" class="mx-auto md:pt-16 md:bg-black-softer">
+  <section class="mx-auto md:pt-16 md:bg-black-softer">
     <div class="grid grid-cols-1 md:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
       <div class="bg-primary px-4 py-8 md:py-24">
         <div class="w-36 h-36 md:w-60 md:h-60 mx-auto !mb-8 text-left">

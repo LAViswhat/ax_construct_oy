@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <section class="flex justify-center items-center w-full bg-primary">
+  <section id="about" class="flex justify-center items-center w-full bg-primary">
     <div
       class="container mx-auto pt-8 pb-4 lg:pb-16 xl:pt-16 xl:px-24"
       data-aos="fade-up"
