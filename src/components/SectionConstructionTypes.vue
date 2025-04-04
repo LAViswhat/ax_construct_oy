@@ -6,7 +6,7 @@
       <div class="bg-primary px-4 py-8 md:py-24">
         <div class="w-36 h-36 md:w-60 md:h-60 mx-auto !mb-8 text-left">
           <img
-            src="../assets/images/about1.jpeg"
+            src="../assets/images/about4.jpg"
             alt="Mission"
             class="w-full h-full object-cover rounded-full"
           />
@@ -27,9 +27,9 @@
           class="md:order-3 w-36 h-36 md:w-60 md:h-60 mx-auto text-left md:!mt-24 !mb-8 2xl:!ml-64 xl:!ml-36"
         >
           <img
-            src="../assets/images/about2.jpeg"
+            src="../assets/images/about5.jpg"
             alt="Goals"
-            class="w-full h-full object-cover rounded-full"
+            class="w-full h-full bg-top object-cover rounded-full"
           />
         </div>
         <h4 class="md:order-1 font-semibold !text-xl text-black !mb-4 md:!mb-12 text-pretty">
@@ -48,7 +48,7 @@
       <div class="bg-black-softer px-4 py-8 md:py-24">
         <div class="w-36 h-36 md:w-60 md:h-60 mx-auto !mb-8 text-left">
           <img
-            src="../assets/images/about3.jpeg"
+            src="../assets/images/about8.jpg"
             alt="Values"
             class="w-full h-full object-cover rounded-full"
           />
