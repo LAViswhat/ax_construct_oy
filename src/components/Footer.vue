@@ -6,7 +6,7 @@ const currentDate = new Date().getFullYear()
     <p>&copy; {{ currentDate }} Ax Construct Oy. All rights reserved.</p>
     <div class="flex gap-4 justify-center">
       <RouterLink to="/terms" class="hover:underline">Käyttöehdot</RouterLink>
-      <RouterLink to="/privacy-policy" class="hover:underline">Tietosuojakäytäntö</RouterLink>
+      <RouterLink to="/tietosuojaseloste" class="hover:underline">Tietosuojaseloste</RouterLink>
     </div>
   </footer>
 </template>

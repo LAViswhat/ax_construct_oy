@@ -7,7 +7,7 @@ import NotFound from '@/views/NotFound.vue'
 const routes = [
   { path: '/', component: Home },
   { path: '/terms', component: Terms },
-  { path: '/privacy-policy', component: Privacy },
+  { path: '/tietosuojaseloste', component: Privacy },
   { path: '/:pathMatch(.*)*', component: NotFound }, // 404
 ]
 

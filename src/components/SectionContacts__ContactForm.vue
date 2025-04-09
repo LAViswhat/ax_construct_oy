@@ -183,7 +183,12 @@ const submitForm = handleSubmit(async (values) => {
         required
       />
 
-      <label for="privacy" class="text-sm text-gray-500">Olen lukenut tietosuojakäytännöstä</label>
+      <label for="privacy" class="text-sm text-gray-500"
+        >Olen lukenut
+        <RouterLink to="/tietosuojaseloste" class="hover:underline"
+          >Tietosuojaseloste</RouterLink
+        ></label
+      >
     </div>
     <div>
       <p v-if="privacyField.errorMessage" class="error-message text-red-500 text-sm">
