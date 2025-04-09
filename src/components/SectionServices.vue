@@ -62,7 +62,7 @@ const colTwoServices = [
 
 <template>
   <section
-    class="flex justify-center items-center w-full bg-linear-to-b from-50% from-stone-100 to-50% to-black-softer"
+    class="flex justify-center items-center w-full bg-white lg:bg-linear-to-b from-50% from-stone-100 to-50% to-black-softer"
   >
     <div class="container mx-auto py-0 lg:py-16 lg:px-24" data-aos="fade-up" data-aos-delay="100">
       <h2 class="font-semibold text-center text-primary">Rakennusalan palvelut</h2>
@@ -76,7 +76,9 @@ const colTwoServices = [
             class="w-full h-full object-cover"
           />
         </div>
-        <div class="flex flex-row w-full justify-around items-center gap-8 p-4 bg-white">
+        <div
+          class="flex flex-row w-full justify-around items-center gap-4 xl:gap-8 p-2 py-4 xl:p-4 bg-white"
+        >
           <div class="flex flex-col">
             <ul class="space-y-4 text-gray-700">
               <li class="text-sm md:text-lg" v-for="list in colOneServices" :key="list.name">

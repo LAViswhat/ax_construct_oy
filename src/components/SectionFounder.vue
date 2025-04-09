@@ -29,7 +29,7 @@
           </div>
         </div>
         <div
-          class="bg-white h-84 max-w-sm hidden md:h-full min-w-full xl:flex items-center justify-center"
+          class="bg-white h-84 max-w-sm xl:max-w-[448px] hidden md:h-full xl:flex items-center justify-center"
         >
           <img
             src="../assets/images/founder_office.jpg"
@@ -54,12 +54,14 @@
               Valitsemalla meidät varmistat, että rakennusprojekti etenee sujuvasti ja luotettavasti
               aikataulussa ja budjetissa.
             </p>
-            <p class="!font-bold pt-4">Yhteistyö kansamme:</p>
-            <ul class="list-disc list-inside">
-              <li class="!font-bold">Kustannustehokkuus</li>
-              <li class="!font-bold">Nopea toteutus</li>
-              <li class="!font-bold">Laadukas lopputulos</li>
-            </ul>
+            <div class="pl-8">
+              <p class="!font-bold pt-4">Yhteistyö kansamme:</p>
+              <ul class="list-disc list-inside">
+                <li class="!font-bold">Kustannustehokkuus</li>
+                <li class="!font-bold">Nopea toteutus</li>
+                <li class="!font-bold">Laadukas lopputulos</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="mx-auto md:pt-16 md:bg-black-softer">
+  <section class="mx-auto md:pt-16 bg-white lg:bg-black-softer">
     <div class="grid grid-cols-1 md:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
       <div class="bg-primary px-4 py-8 md:py-24">
         <div class="w-36 h-36 md:w-60 md:h-60 mx-auto !mb-8 text-left">
@@ -14,7 +14,7 @@
         <h4 class="font-semibold !text-xl text-white !mb-4 md:!mb-12 text-pretty">
           Asuntorakentaminen
         </h4>
-        <p class="text-white xl:!text-lg xl:pl-24 text-pretty">
+        <p class="text-white xl:!text-lg text-pretty">
           Rakennamme ja korjaamme asuntokohteita ja koteja asiakkaisiin eri tarpeisiin. Rakennamme
           asiakkaan suunnitelmien mukaisia asuntokohteita laadukkaasti ja sovittuna ajankohtana.
           Voimme tulla mukaan kumppaniksi aivan hankeen alussa, tai vasta myöhemmin, esimerkiksi
@@ -56,7 +56,7 @@
         <h4 class="text-white !text-xl font-semibold !mb-4 md:!mb-12 text-pretty">
           Julkinen rakentaminen
         </h4>
-        <p class="text-white xl:!text-lg xl:pl-24 text-pretty">
+        <p class="text-white xl:!text-lg text-pretty">
           Julkisrakentaminen vaatii vahvaa rakennusosaamista.Rakennamme ja korjaamme julkisia
           kohteita monipuolisesti, sairaaloista kouluihin, päiväkodeista monitoimitiloihin.
           Julkisten tilojen on sovelluttava monenlaisille käyttäjille. Niiden on kestettävä aikaa ja
