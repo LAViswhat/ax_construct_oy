@@ -31,7 +31,7 @@ import SectionContacts__ContactForm from './SectionContacts__ContactForm.vue'
             <span class="text-lg md:text-2xl">info@axconstruct.fi</span></a
           >
           <p class="inline-flex items-center gap-4">
-            <img class="w-10 h-10" src="../assets/images/icons/address.svg" />
+            <img class="w-10 h-10" src="../assets/images/icons/envelope.svg" />
             <span class="text-lg md:text-2xl">Haapaniemenkatu 11 A 24 00530 Helsinki</span>
           </p>
         </div>
