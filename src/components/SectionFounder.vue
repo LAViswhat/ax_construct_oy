@@ -1,8 +1,8 @@
 <script setup lang="ts"></script>
 <template>
-  <section id="about" class="flex justify-center items-center w-full bg-primary">
+  <section id="about" class="flex justify-center items-center w-full bg-white md:bg-primary">
     <div
-      class="container mx-auto pt-8 pb-4 lg:pb-16 xl:pt-16 xl:px-24"
+      class="container mx-auto pt-0 md:pt-8 pb-4 lg:pb-16 xl:pt-16 xl:px-24"
       data-aos="fade-up"
       data-aos-delay="100"
     >
@@ -22,7 +22,7 @@
           <div class="p-2 pl-0 lg:p-4 bg-white">
             <h4 class="uppercase">Aleksandr K.</h4>
             <h5 class="!font-normal">Toimitusjohtaja. Työnjohtaja</h5>
-            <p class="pt-6 !font-bold">
+            <p class="py-6 !font-bold pl-4">
               &ldquo; 18 vuoden kokemus rakennusalalla, ammattitaito, vastuullisuus, toimintakyky,
               työn laatu ja turvallisuus ovat yritykseni kulmakiviä &rdquo;
             </p>
@@ -55,10 +55,10 @@
               aikataulussa ja budjetissa.
             </p>
             <p class="!font-bold pt-4">Yhteistyö kansamme:</p>
-            <ul>
-              <li>&ndash; Kustannustehokkuus</li>
-              <li>&ndash; Nopea toteutus</li>
-              <li>&ndash; Laadukas lopputulos</li>
+            <ul class="list-disc list-inside">
+              <li class="!font-bold">Kustannustehokkuus</li>
+              <li class="!font-bold">Nopea toteutus</li>
+              <li class="!font-bold">Laadukas lopputulos</li>
             </ul>
           </div>
         </div>
