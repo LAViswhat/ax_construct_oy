@@ -24,7 +24,7 @@
 
       <div class="flex flex-col bg-white px-4 py-8 md:py-24">
         <div
-          class="md:order-3 w-36 h-36 md:w-60 md:h-60 mx-auto text-left md:!mt-24 !mb-8 2xl:!ml-64 xl:!ml-36"
+          class="md:order-3 w-36 h-36 md:w-60 md:h-60 mx-auto text-left md:!mt-20 !mb-8 2xl:!ml-64 xl:!ml-36"
         >
           <img
             src="../assets/images/about5.jpg"
