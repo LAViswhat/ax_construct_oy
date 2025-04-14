@@ -4,6 +4,7 @@ import { useForm, useField } from 'vee-validate'
 import * as yup from 'yup'
 import emailjs from '@emailjs/browser'
 import UiButton from './ui/UiButton.vue'
+import { useToast } from 'primevue'
 
 const validationSchema = yup.object({
   name: yup.string().required('Nimi on pakollinen'),
@@ -52,8 +53,8 @@ const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY
 const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY
 
 const isSubmitting = ref(false)
-const successMessage = ref('')
-const errorMessage = ref('')
+
+const toast = useToast()
 
 /* const submitForm = handleSubmit(async (values) => {
   isSubmitting.value = true
@@ -101,12 +102,22 @@ const submitForm = handleSubmit(async (values) => {
 
   try {
     await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
-    successMessage.value =
-      'Viesti on lähetetty onnistuneesti!' /* (window as any).grecaptcha.reset() */
+    toast.add({
+      severity: 'success',
+      summary: 'Onnistui',
+      detail: 'Viesti on lähetetty onnistuneesti! Olemme sinuun pian yhteydessä.',
+      life: 3000,
+    })
+    /* (window as any).grecaptcha.reset() */
     resetForm()
   } catch (error) {
     console.error('Lomakkeen lähetysvirhe:', error)
-    errorMessage.value = 'Lähetys epäonnistui.'
+    toast.add({
+      severity: 'error',
+      summary: 'Virhe',
+      detail: 'Lähetys epäonnistui. Yritä myöhemmin uudelleen.',
+      life: 3000,
+    })
   } finally {
     isSubmitting.value = false
   }
@@ -114,6 +125,7 @@ const submitForm = handleSubmit(async (values) => {
 </script>
 
 <template>
+  <Toast position="top-center" />
   <form @submit.prevent="submitForm" class="space-y-4 !mt-6" data-aos="fade-up">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 !mb-8">
       <div>
@@ -195,11 +207,6 @@ const submitForm = handleSubmit(async (values) => {
         {{ privacyField.errorMessage }}
       </p>
     </div>
-
-    <p v-if="successMessage" class="text-secondary !text-lg !font-bold">{{ successMessage }}</p>
-    <p v-if="errorMessage" class="error-message text-red-500 !text-lg !font-bold">
-      {{ errorMessage }}
-    </p>
 
     <div>
       <!-- <div class="g-recaptcha !mb-4" :data-sitekey="RECAPTCHA_SITE_KEY"></div> -->
