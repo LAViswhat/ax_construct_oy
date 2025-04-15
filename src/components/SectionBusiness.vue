@@ -46,7 +46,7 @@ const serviceList: Service[] = [
       <h3 class="text-center !mt-4 !mb-8 mx-auto">
         Tarjoamme uudis- ja korjausrakentamista läpinäkyvästi ja asiakaslähtöisesti.
       </h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-8">
         <div
           v-for="(service, index) in serviceList"
           :key="service.title"

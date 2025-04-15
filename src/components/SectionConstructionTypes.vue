@@ -4,7 +4,7 @@
   <section class="mx-auto md:pt-16 bg-white lg:bg-black-softer">
     <div class="grid grid-cols-1 md:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
       <div class="bg-primary px-4 py-8 md:py-24">
-        <div class="w-36 h-36 md:w-60 md:h-60 mx-auto !mb-8 text-left">
+        <div class="w-36 h-36 md:w-54 md:h-54 lg:w-60 lg:h-60 mx-auto !mb-8 text-left">
           <img
             src="../assets/images/about4.jpg"
             alt="Mission"
@@ -24,7 +24,7 @@
 
       <div class="flex flex-col bg-white px-4 py-8 md:py-24">
         <div
-          class="md:order-3 w-36 h-36 md:w-60 md:h-60 mx-auto text-left md:!mt-20 !mb-8 2xl:!ml-64 xl:!ml-36"
+          class="md:order-3 w-36 h-36 md:w-54 md:h-54 lg:w-60 lg:h-60 mx-auto text-left md:!mt-20 !mb-8 2xl:!ml-64 xl:!ml-36"
         >
           <img
             src="../assets/images/about5.jpg"
@@ -46,7 +46,7 @@
       </div>
 
       <div class="bg-black-softer px-4 py-8 md:py-24">
-        <div class="w-36 h-36 md:w-60 md:h-60 mx-auto !mb-8 text-left">
+        <div class="w-36 h-36 md:w-54 md:h-54 lg:w-60 lg:h-60 mx-auto !mb-8 text-left">
           <img
             src="../assets/images/about8.jpg"
             alt="Values"
