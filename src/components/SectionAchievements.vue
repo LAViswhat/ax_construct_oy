@@ -41,7 +41,7 @@ const achievements: Achievments[] = [
         </div>
         <div class="bg-white h-96 md:h-[440px] min-w-full flex items-center justify-center">
           <img
-            src="../assets/images/achievements.JPG"
+            src="../assets/images/achievements.jpg"
             alt="Building"
             class="w-full h-full object-cover"
           />

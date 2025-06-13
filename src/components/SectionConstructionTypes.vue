@@ -27,7 +27,7 @@
           class="md:order-3 w-36 h-36 md:w-54 md:h-54 lg:w-60 lg:h-60 mx-auto text-left md:!mt-20 !mb-8 2xl:!ml-64 xl:!ml-36"
         >
           <img
-            src="../assets/images/about6.JPG"
+            src="../assets/images/about6.jpg"
             alt="Goals"
             class="w-full h-full bg-top object-cover rounded-full"
           />
