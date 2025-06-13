@@ -3,8 +3,8 @@ import { ref } from 'vue'
 import Carousel from 'primevue/carousel'
 import firstPartnerLogo from '@/assets/images/partner1.png'
 import secondPartnerLogo from '@/assets/images/partner2.svg'
-import thirdPartnerLogo from '@/assets/images/partner3.png'
-import fourthPartnerLogo from '@/assets/images/partner4.png'
+import fourthPartnerLogo from '@/assets/images/partner3.svg'
+import thirdPartnerLogo from '@/assets/images/partner4.png'
 
 interface Partners {
   id: number
@@ -25,12 +25,12 @@ const partnersList: Partners[] = [
   },
   {
     id: 3,
-    title: 'Sajucon',
+    title: 'leikkiturva oy',
     image: thirdPartnerLogo,
   },
   {
     id: 4,
-    title: 'leikkiturva oy',
+    title: 'yit',
     image: fourthPartnerLogo,
   },
 ]

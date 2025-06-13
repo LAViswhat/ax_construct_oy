@@ -34,12 +34,14 @@ const achievements: Achievments[] = [
           <p class="md:!text-xl py-4">
             Meillä on pitkä kokemus erilaisten tilojen rakentajana. Rakennamme yhdessä asiakkaidemme
             ja yhteistyökumppaneidemme kanssa koteja toimi- ja liiketiloja, päivä- ja hoivakoteja,
-            kouluja sekä sairaaloita. Toimimme koko Uudenmaan alueella ja sen ulkopuolella.
+            kouluja sekä sairaaloita. Toimimme koko Uudenmaan alueella ja sen ulkopuolella. Ota
+            meihin yhteyttä saadakseni kustannustehokkaan tarjouksen teille sopivalla
+            työaikataululla.
           </p>
         </div>
-        <div class="bg-white h-72 md:h-96 min-w-full flex items-center justify-center">
+        <div class="bg-white h-96 md:h-[440px] min-w-full flex items-center justify-center">
           <img
-            src="../assets/images/achievements.jpg"
+            src="../assets/images/achievements.JPG"
             alt="Building"
             class="w-full h-full object-cover"
           />

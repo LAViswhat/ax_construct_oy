@@ -1,61 +1,25 @@
 <script setup lang="ts">
 const colOneServices = [
   {
-    name: 'Väliseinät',
+    name: 'Sisätyöt',
   },
   {
-    name: 'Alakatot',
+    name: 'Puutyöt',
   },
   {
-    name: 'Moduuli alakatot',
-  },
-  {
-    name: 'DB katot',
-  },
-  {
-    name: 'Puu alakatot',
-  },
-  {
-    name: 'DB Lattiat',
-  },
-  {
-    name: 'Palokatkot',
-  },
-  {
-    name: 'Lattiat',
-  },
-  {
-    name: 'Ovet ja Ikkunat',
+    name: 'Timpurityöt',
   },
 ]
 
 const colTwoServices = [
   {
-    name: 'Muuraustyöt',
+    name: 'Märkätilatyöt',
   },
   {
-    name: 'Valutyöt ja Lattiavalut',
+    name: 'Betonityöt',
   },
   {
-    name: 'Tukkovalu työt',
-  },
-  {
-    name: 'Muottityöt',
-  },
-  {
-    name: 'Palkkien villoitus',
-  },
-  {
-    name: 'Saumojen vaihto',
-  },
-  {
-    name: 'Saunat',
-  },
-  {
-    name: 'Terassit',
-  },
-  {
-    name: 'Ja paljon muuta',
+    name: 'Kirvesmiehentyöt',
   },
 ]
 </script>
@@ -67,29 +31,39 @@ const colTwoServices = [
     <div class="container mx-auto py-0 lg:py-16 lg:px-24" data-aos="fade-up" data-aos-delay="100">
       <h2 class="font-semibold text-center text-primary">Rakennusalan palvelut</h2>
       <div class="flex flex-row flex-wrap md:flex-nowrap !mt-8">
-        <div class="bg-white h-62 md:h-96 w-full md:w-4/12 flex items-center justify-center">
+        <div class="bg-white h-62 md:h-full w-full md:max-w-5/12 flex items-center justify-center">
           <img
-            src="../assets/images/facilities.jpg"
+            src="../assets/images/about5.jpg"
             alt="Building"
-            class="w-full h-full object-cover"
+            class="w-full h-ful max-h-74 md:min-h-[522px] object-cover"
           />
         </div>
-        <div
-          class="flex flex-row w-full md:w-8/12 justify-around items-center gap-4 xl:gap-8 p-2 py-4 xl:p-4 bg-white"
-        >
-          <div class="flex flex-col">
-            <ul class="space-y-4 text-gray-700">
-              <li class="text-sm md:text-lg" v-for="list in colOneServices" :key="list.name">
-                ✅ {{ list.name }}
-              </li>
-            </ul>
+        <div class="flex flex-col w-full md:w-7/12 items-center bg-white">
+          <h3 class="text-center !mt-4">Tarjoamme laajan valikoiman rakennusalan palveluita.</h3>
+          <div class="flex flex-row justify-between gap-4 xl:gap-12 p-2 py-4 xl:p-4">
+            <div class="flex flex-col">
+              <ul class="space-y-4 text-gray-700">
+                <li class="text-sm md:text-2xl" v-for="list in colOneServices" :key="list.name">
+                  ✅ {{ list.name }}
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col">
+              <ul class="space-y-4 text-gray-700">
+                <li class="text-sm md:text-2xl" v-for="list in colTwoServices" :key="list.name">
+                  ✅ {{ list.name }}
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="flex flex-col">
-            <ul class="space-y-4 text-gray-700">
-              <li class="text-sm md:text-lg" v-for="list in colTwoServices" :key="list.name">
-                ✅ {{ list.name }}
-              </li>
-            </ul>
+          <div
+            class="text-white bg-primary text-center px-2 py-4 md:px-6 md:py-8 rounded-4xl !mt-2 !mb-6 !mx-2 md:mx-0"
+          >
+            <p class="xl:!text-lg text-pretty">Väliseinät, alakatot, lattiat, ikkunat ja ovet</p>
+            <p class="xl:!text-lg text-pretty">Kylpyhuoneet, uima-altaat ja saunat</p>
+            <p class="xl:!text-lg text-pretty">Pientalot, terassit, parvekkeet ja varastot</p>
+            <p class="xl:!text-lg text-pretty">Betonivalun, muuraus ja muotit</p>
+            <p class="xl:!text-lg text-pretty">Kaikenkokoiset remontit ja vahingon korjaukset</p>
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@
           class="md:order-3 w-36 h-36 md:w-54 md:h-54 lg:w-60 lg:h-60 mx-auto text-left md:!mt-20 !mb-8 2xl:!ml-64 xl:!ml-36"
         >
           <img
-            src="../assets/images/about5.jpg"
+            src="../assets/images/about6.JPG"
             alt="Goals"
             class="w-full h-full bg-top object-cover rounded-full"
           />
@@ -57,7 +57,7 @@
           Julkinen rakentaminen
         </h4>
         <p class="text-white xl:!text-lg text-pretty">
-          Julkisrakentaminen vaatii vahvaa rakennusosaamista.Rakennamme ja korjaamme julkisia
+          Julkisrakentaminen vaatii vahvaa rakennusosaamista. Rakennamme ja korjaamme julkisia
           kohteita monipuolisesti, sairaaloista kouluihin, päiväkodeista monitoimitiloihin.
           Julkisten tilojen on sovelluttava monenlaisille käyttäjille. Niiden on kestettävä aikaa ja
           aktiivista käyttöä – ja oltava tietenkin turvallisia käyttää. Me tarjoamme laadukkaat
