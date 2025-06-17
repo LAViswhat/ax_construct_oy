@@ -40,6 +40,21 @@ const colTwoServices = [
         </div>
         <div class="flex flex-col w-full md:w-7/12 items-center bg-white">
           <h3 class="text-center !mt-4">Tarjoamme laajan valikoiman rakennusalan palveluita.</h3>
+          <div
+            class="text-white bg-primary text-center px-2 py-4 md:px-6 md:py-8 rounded-4xl !my-4 !mx-2 md:mx-0"
+          >
+            <p class="xl:!text-lg text-pretty !font-bold">
+              Väliseinät, alakatot, lattiat, ikkunat ja ovet
+            </p>
+            <p class="xl:!text-lg text-pretty !font-bold">Kylpyhuoneet, uima-altaat ja saunat</p>
+            <p class="xl:!text-lg text-pretty !font-bold">
+              Pientalot, terassit, parvekkeet ja varastot
+            </p>
+            <p class="xl:!text-lg text-pretty !font-bold">Betonivalun, muuraus ja muotit</p>
+            <p class="xl:!text-lg text-pretty !font-bold">
+              Kaikenkokoiset remontit ja vahingon korjaukset
+            </p>
+          </div>
           <div class="flex flex-row justify-between gap-4 xl:gap-12 p-2 py-4 xl:p-4">
             <div class="flex flex-col">
               <ul class="space-y-4 text-gray-700">
@@ -55,15 +70,6 @@ const colTwoServices = [
                 </li>
               </ul>
             </div>
-          </div>
-          <div
-            class="text-white bg-primary text-center px-2 py-4 md:px-6 md:py-8 rounded-4xl !mt-2 !mb-6 !mx-2 md:mx-0"
-          >
-            <p class="xl:!text-lg text-pretty">Väliseinät, alakatot, lattiat, ikkunat ja ovet</p>
-            <p class="xl:!text-lg text-pretty">Kylpyhuoneet, uima-altaat ja saunat</p>
-            <p class="xl:!text-lg text-pretty">Pientalot, terassit, parvekkeet ja varastot</p>
-            <p class="xl:!text-lg text-pretty">Betonivalun, muuraus ja muotit</p>
-            <p class="xl:!text-lg text-pretty">Kaikenkokoiset remontit ja vahingon korjaukset</p>
           </div>
         </div>
       </div>

@@ -39,7 +39,7 @@ const achievements: Achievments[] = [
             työaikataululla.
           </p>
         </div>
-        <div class="bg-white h-96 md:h-[440px] min-w-full flex items-center justify-center">
+        <div class="bg-white h-96 md:h-[440px] flex items-center justify-center">
           <img
             src="../assets/images/achievements.jpg"
             alt="Building"
